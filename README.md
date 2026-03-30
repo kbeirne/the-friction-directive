@@ -10,6 +10,14 @@ The Friction Directive is a framework designed to instruct an AI on how to creat
 
 It came about from a design for a game I had planned that I presented to Claude Opus. After some refinements and a highly successful first playthrough, I formalised these documents and began refining them with the hope of directing an AI to create more interesting and more reliable social deduction RPGs. Takes inspiration from games like Werewolf, Blood on the Clocktower and the Minecraft Orient Express map.
 
+## How to play
+
+- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework.md` and optionally the v1 example files and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
+- **DON'T** view any files the LLM creates - all the information you need to play the game will appear in text i.e. the scenario your character has before you
+- It should now introduce you to the game and give you options on how to proceed.
+- **SELECT** from the provided options or **TYPE** your own answer freely.
+- **TROUBLESHOOT** with the version notes below.
+
 ## Framework Patch Version 1
 
 This was a patch file introduced to address some narrative and structural issues noticed in the first version. This can optionally be provided to the LLM alongside the standard framework when starting a new game. However as this was early experimentation, this made some things better but ultimately destabilised the system. A highly satisfying narrative was still created but not all rules were followed and some of the narrative conclusions for other characters were less exciting. Use with caution.
