@@ -1,6 +1,14 @@
 # The Friction Directive
 
-The Friction Directive is a framework designed to instruct an AI on how to create an asymetric social deduction RPG. It came about from a design for a game I had planned that I presented to Claude Opus. After some refinements and an highly successful first playthrough, I formalised these documents and began refining them with the hope of directing an AI to create more interesting and more reliable social deduction RPGs.
+The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window:
+
+- The game allows a player to take on a particular role (spy, thief, appraiser etc.) and try to complete their goal (find the prisoner, complete a ritual, steal a special item etc.) in an enclosed setting (such as a gathering at an old castle, a ship, a train etc.).
+- The player must uncover the mysteries behind the characters and the world in order to complete their goal.
+- The player may move from room to room and interact with characters and use items to get closer to their goal
+- As this happens, 12+ other characters with their own roles attempt to complete their goals that may conflict with the player.
+- The world exists outside the player and they can miss key events and characters. The entire game's story can be reviewed by the player at the end so they can find out everything they might have been missed.
+
+It came about from a design for a game I had planned that I presented to Claude Opus. After some refinements and a highly successful first playthrough, I formalised these documents and began refining them with the hope of directing an AI to create more interesting and more reliable social deduction RPGs. Takes inspiration from games like Werewolf, Blood on the Clocktower and the Minecraft Orient Express map.
 
 ## Framework Patch Version 1
 
