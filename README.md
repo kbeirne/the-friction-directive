@@ -18,6 +18,16 @@ It came about from a design for a game I had planned that I presented to Claude 
 - **SELECT** from the provided options or **TYPE** your own answer freely.
 - **TROUBLESHOOT** with the version notes below.
 
+## Framework Version 1.01
+
+Some minor changes designed to increase the number of story options available. Made after running "The Iron Wake" playtest to help discourage the LLM from merging characters together (having 3 characters with the same goal doing roughly the same thing e.g. the witches in "The Wizard's Feast") and repeating similar stories. Largely untested but minor changes that are likely to improve the experience. Similar limitations to `Framework Version 1`. Can be run with `framework_refinements_patch_v1.md`.
+
+- Introduced more friction into world exploration and alliance building.
+- More notes to reinforce simulating other characters' even when the player is not doing much.
+- Reduced priority of triggers changing other characters' win conditions as this makes it less like a game
+- Nudged the restrictions slightly in favor of more violent options (with main focus still on social interaction)
+- Removed instructions that were based around irrelevant story beats of the e.g. `Include some characters that must find each other.` Not necessary.
+
 ## Framework Patch Version 1
 
 This was a patch file introduced to address some narrative and structural issues noticed in the first version. This can optionally be provided to the LLM alongside the standard framework when starting a new game. However as this was early experimentation, this made some things better but ultimately destabilised the system. A highly satisfying narrative was still created but not all rules were followed and some of the narrative conclusions for other characters were less exciting. Use with caution.
