@@ -18,6 +18,55 @@ It came about from a design for a game I had planned that I presented to Claude 
 - **SELECT** from the provided options or **TYPE** your own answer freely.
 - **TROUBLESHOOT** with the version notes below.
 
+## Framework Version 2
+
+Integrates the player knowledge ledger and other vital steps from the patch into the main document to reduce inconsistencies and simplifies the corresponding patch document. Tested with `framework_refinements-patch_v2.md`
+
+### How to run
+
+- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_v2.md` and optionally `framework_refinements-patch_v2.md` and then explain that it is tasked with generating a new game RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
+- **DON'T** view any files the LLM creates - all the information you need to play the game will appear in text i.e. the scenario your character has before you
+- It should now introduce you to the game and give you options on how to proceed. Each time you are presented with a scene:
+**SELECT** from the provided options or **TYPE** your own answer freely.
+  - **Constraints**: You shouldn't attempt to leave the main area unless you are doing it as part of the conclusion of your game. You should also pay attention and try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
+- If the LLM appears to diverge from the rules (not writing files) or is letting information use the TROUBLESHOOTING comments to get it back on track.
+
+### Tested With
+
+- Claude Opus: This is a difficult task and requires additional features such as writing several files and hiding them.
+
+### Features
+
+- Improves consistency and maintains game rules better with a more rigid instruction set.
+- Integrates the player knowledge ledger into the main document and round structure.
+- Integrates The Friction Directive into the main document and round structure.
+- Integrates The Dead End check into the main document and round structure.
+- Tested with "The Hargrove Affair" - a campaign that ran the most reliably once structure was enforced but a less interesting story than the previous tests. This felt more like luck of the draw when creating the initial bible from the player's suggestions than an issue introduced into the framework. However, it could be more rigid rules are affecting the narrative. There was more knowledge leakage than Version 1.1 but less than Version 1. May benefit from changing when the knowledge ledger is consulted.
+
+### Known Issues
+
+- May leak information to the player (secrets they shouldn't know) in the main text window. Remind it not to with this:
+
+    ```chat
+    (The process is going very well, just you leaked some vital information there before composing the scene. Make sure to write all prescene preparation in the scratch file)
+    ```
+
+- May leak small bits of information in the file names. No fix available in this version. Recommend just scrolling past or waiting for file writing to be complete, at which point the information will be hidden again.
+
+- Follows the rules more closely but still diverges from the required Round Structure over time. You might not even notice in a casual playthrough but this undermines the framework. Ask it to output the files as a separate message to improve consistency:
+
+    ```chat
+    (Before we continue with the scene please present the updated player knowledge ledger and the updated game diary. Have they both been updated for this round?)
+    ```
+
+- If it continues to diverge then you can use this message repeatedly throughout. Add this as a separate message:
+
+    ```chat
+    (please review the framework document and ensure you are following the round structure. Update the diary and ledger with any missing information and then let me know when you are ready to proceed.)
+    ```
+
+- Claimed the player can freely view the knowledge ledger "as this does not contain secret information": This is not true. Never read any of the generated files until the very end unless you want to cheat.
+
 ## Framework Version 1.01
 
 Some minor changes designed to increase the number of story options available. Made after running "The Iron Wake" playtest to help discourage the LLM from merging characters together (having 3 characters with the same goal doing roughly the same thing e.g. the witches in "The Wizard's Feast") and repeating similar stories. Largely untested but minor changes that are likely to improve the experience. Similar limitations to `Framework Version 1`. Can be run with `framework_refinements_patch_v1.md`.
@@ -27,6 +76,7 @@ Some minor changes designed to increase the number of story options available. M
 - Reduced priority of triggers changing other characters' win conditions as this makes it less like a game
 - Nudged the restrictions slightly in favor of more violent options (with main focus still on social interaction)
 - Removed instructions that were based around irrelevant story beats of the e.g. `Include some characters that must find each other.` Not necessary.
+- Tested this with `framework_refinements_patch_v1.md` in "The Iron Wake". This created an excellent story that had far less knowledge leakage than the Version 1 test ("The Wizard's Feast") but the framework broke down as it went on. How much is unclear as files were missing by the end but essentially it followed the structure at the beginning to create a great setup but the later scenes were not mapped as accurately and some characters were essentially dropped (never had a story advance). This didn't negatively impact the story too much but undermined the framework and meant some characters did not make their "desperate" moves.
 
 ## Framework Patch Version 1
 
