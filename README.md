@@ -12,24 +12,17 @@ It came about from a design for a game I had planned that I presented to Claude 
 
 ## How to play
 
-- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework.md` and optionally the v1 example files and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
-- **DON'T** view any files the LLM creates - all the information you need to play the game will appear in text i.e. the scenario your character has before you
+- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_vX.md` and optionally the corresponding `framework_refinements-patch_vX` file and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
 - It should now introduce you to the game and give you options on how to proceed.
 - **SELECT** from the provided options or **TYPE** your own answer freely.
-- **TROUBLESHOOT** with the version notes below.
+  - **DO** try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
+  - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the scenario your character is presented in the main chat window.
+  - **DON'T** Move your character to areas that haven't been described to you.
+  - **TROUBLESHOOT** using the corresponding version notes below.
 
 ## Framework Version 2
 
 Integrates the player knowledge ledger and other vital steps from the patch into the main document to reduce inconsistencies and simplifies the corresponding patch document. Tested with `framework_refinements-patch_v2.md`
-
-### How to run
-
-- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_v2.md` and optionally `framework_refinements-patch_v2.md` and then explain that it is tasked with generating a new game RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
-- **DON'T** view any files the LLM creates - all the information you need to play the game will appear in text i.e. the scenario your character has before you
-- It should now introduce you to the game and give you options on how to proceed. Each time you are presented with a scene:
-**SELECT** from the provided options or **TYPE** your own answer freely.
-  - **Constraints**: You shouldn't attempt to leave the main area unless you are doing it as part of the conclusion of your game. You should also pay attention and try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
-- If the LLM appears to diverge from the rules (not writing files) or is letting information use the TROUBLESHOOTING comments to get it back on track.
 
 ### Tested With
 
@@ -43,16 +36,21 @@ Integrates the player knowledge ledger and other vital steps from the patch into
 - Integrates The Dead End check into the main document and round structure.
 - Tested with "The Hargrove Affair" - a campaign that ran the most reliably once structure was enforced but a less interesting story than the previous tests. This felt more like luck of the draw when creating the initial bible from the player's suggestions than an issue introduced into the framework. However, it could be more rigid rules are affecting the narrative. There was more knowledge leakage than Version 1.1 but less than Version 1. May benefit from changing when the knowledge ledger is consulted.
 
-### Known Issues
+### Known Issues / Troubleshooting
 
-- May leak information to the player (secrets they shouldn't know) in the main text window. Remind it not to with this:
+- May leak information to the player (secrets they shouldn't know) in the main text window **BEFORE** presenting a scene. Remind it not to with this:
 
     ```chat
     (The process is going very well, just you leaked some vital information there before composing the scene. Make sure to write all prescene preparation in the scratch file)
     ```
 
-- May leak small bits of information in the file names. No fix available in this version. Recommend just scrolling past or waiting for file writing to be complete, at which point the information will be hidden again.
+- May leak information to the player during a scene. No fix tested but you can include a warning in brackets alongside your answer e.g.
 
+    ```chat
+    (I've noticed some facts that my character doesn't know presented in the scene. Make sure to consult the game diary and player knowledge ledger for information known to the player before composing future scenes)
+    ```
+
+- May leak small bits of information in the file names. No fix available in this version. Recommend just scrolling past or waiting for file writing to be complete, at which point the information will be hidden again.
 - Follows the rules more closely but still diverges from the required Round Structure over time. You might not even notice in a casual playthrough but this undermines the framework. Ask it to output the files as a separate message to improve consistency:
 
     ```chat
@@ -104,32 +102,34 @@ The so called "Wizard's Feast" deduction game that the AI generated was remarkab
 
 - Claude Opus: This is a difficult task and requires additional features such as writing several files and hiding them.
 
-### How to run
-
-- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework.md` and optionally the v1 example files and explain that it is tasked with generating a new game RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
-- **DON'T** view any files the LLM creates - all the information you need to play the game will appear in text i.e. the scenario your character has before you
-- It should now introduce you to the game and give you options on how to proceed. Each time you are presented with a scene:
-**SELECT** from the provided options or **TYPE** your own answer freely.
-  - **Constraints**: You shouldn't attempt to leave the main area unless you are doing it as part of the conclusion of your game. You should also pay attention and try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
-- If the LLM appears to be losing track of other characters then include this after your usual response to the scene (in the same message, don't separate it.).
-
-    ```chat
-    <your normal game respones>
-    (don't forget to advance your diary along with the actions of each of the players when you deem it appropriate.)
-    ```
-
-- If the LLM is revealing too much to you (spoilers) then paste this directly after your usual response to the scene (in the same message, don't separate it.)
-
-    ```chat
-    <your normal game respones>
-    (don't forget to advance your diary along with the actions of the players when you deem it appropriate. Also make sure to obscure the details you are about to reveal to me through the story. You just let something slip that my character didn't yet know. Add a hidden scratch space if you need a means to reflect before updating your diary or continuing the story)
-    ```
-
-- For other issues, **READ** `4.1 — Round Structure` and ensure the LLM is following the steps correctly. There are limitations to this version and not all consistency issues can be resolved this way. Unless seriously disruptive I recommend ignoring them as the LLM is very good at smoothing out consistency issues over time.
-
 ### Known Issues
 
 - Fails to obscure knowledge from the player reliably (has trouble distinguishing what the player does and does not know). Once the scratch space was added, these issues were minor and did not ruin the goal-based nature of the story but were still present.
-- Too helpful: AI's natural helpfulness makes the NPC's overly helpful even when it does not serve their goals.
+- Too helpful: The LLM's natural helpfulness makes the NPC's overly helpful even when it does not serve their goals.
 - AI sometimes leaked its "plan" of what to show the player to the player first. This can be corrected for by suggesting the AI use a scratch space to obscure all details except the scenes presented to the player.
-- Failure to follow instructions: The AI should regularly be updating the `game_diary.md` and consulting the `game_bible.md` but can err from this path. If you see this happening try to correct it as early as possible by including any corrections in brackets after your usual response e.g. `(Don't forget to consult the game bible before writing your diary entry)`
+- Failure to follow instructions: The LLM should regularly be updating the `game_diary.md` and consulting the `game_bible.md` but can err from this path. If you see this happening try to correct it as early as possible by including any corrections in brackets after your usual response e.g.
+
+```chat
+(Don't forget to consult the game bible before writing your diary entry)
+```
+
+### Troubleshooting
+
+- If the LLM is revealing too much to you (spoilers) then paste this directly after your usual response to the scene (in the same message, don't separate it.)
+
+```chat
+<your normal game respones>
+(don't forget to advance your diary along with the actions of the players when you deem it appropriate. Also make sure to obscure the details you are about to reveal to me through the story. You just let something slip that my character didn't yet know. Add a hidden scratch space if you need a means to reflect before updating your diary or continuing the story)
+```
+
+- If the LLM appears to be losing track of other characters then include this after your usual response to the scene (in the same message, don't separate it.).
+
+```chat
+<your normal game respones>
+(don't forget to advance your diary along with the actions of each of the players when you deem it appropriate.)
+```
+
+
+- For other issues, **READ** `4.1 — Round Structure` and ensure the LLM is following the steps correctly. e.g. 
+
+There are limitations to this version and not all consistency issues can be resolved this way. Unless seriously disruptive I recommend ignoring them as the LLM is very good at smoothing out consistency issues over time.
