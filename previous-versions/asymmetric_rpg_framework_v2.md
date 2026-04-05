@@ -34,7 +34,7 @@ Establish through direct questions:
 
 - **Perspective:** How much should the player see? (Pure first-person? Observable body language and cues? Occasional dramatic irony?)
 - **Pacing:** Fast and tense, or slow-burn with exploration time? Or adaptive based on how the story develops?
-- **Agency style:** Structured choices, free-form input, or a mix where suggestions are offered but off-script actions are always welcome?
+- **Agency style:** Structured choices, free-form input, or a mix where suggestions are offered but off-script actions are always welcome
 - **Tone:** Dark, comedic, horror, political, romantic, swashbuckling?
 - **Player count:** 12-16 NPCs is the tested sweet spot. Fewer than 10 lacks complexity; more than 18 becomes unmanageable for the AI.
 

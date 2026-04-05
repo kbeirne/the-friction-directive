@@ -135,14 +135,14 @@ Even without naming, the narrator can accidentally imply information through nar
 
 | Too Much Information | Just Right |
 |---------------------|-----------|
-| "The assassin watched from the shadows" | "Cray stood near the wall, eyes tracking Aldric" |
+| "The assassin watched from the shadows" | "Upon looking closer, you notice Cray stood near the wall, eyes tracking Aldric" |
 | "She clutched the poison in her pocket" | "Her hand drifted to her coat and stayed there" |
 | "The witches exchanged a knowing glance" | "Sable's eyes found Agatha's across the room for a moment" |
 | "He was planning his escape route" | "He studied the Courtyard doors, then the main entrance, then the servant's door" |
 
 ### The Retroactive Consistency Problem
 
-As the game progresses, the player accumulates knowledge. Early narration may have been slightly too revealing (information that seemed harmless in Round 2 becomes a spoiler in hindsight once the player understands the full picture). This is difficult to prevent entirely, but can be minimized:
+As the game progresses, the player accumulates knowledge. Early narration may have been too revealing (information that seemed harmless in Round 2 becomes a spoiler in hindsight once the player understands the full picture). This is difficult to prevent entirely, but can be minimized:
 
 **Rule: When introducing a character or location, describe only what is externally, physically observable at that moment. Save emotional or atmospheric language for things the player character would genuinely feel (unease, warmth, suspicion) rather than things that encode narrator knowledge.**
 
@@ -151,67 +151,4 @@ Example (Round 1, introducing the Chapel):
 - Too revealing: "The Chapel held a power that could bind souls or shatter enchantments"
 - Better: "A small, cold room in the north wing, dust on the pews, an altar of rough stone"
 
-The Chapel's significance should emerge through play, not through narration.
-
----
-
-## 4. PACING GUIDELINES — SUPPLEMENTARY
-
-### The "Momentum Check"
-
-At the end of each diary entry, before writing the player scene, the narrator should ask:
-
-> **Is the game moving?** Specifically:
->
-> - Has at least one NPC achieved a sub-goal or encountered a significant obstacle this round?
-> - Has at least one new piece of information entered circulation (discovered by any character, not just the player)?
-> - Is at least one situation more urgent than it was last round?
->
-> If the answer to all three is NO, the narrator should accelerate: trigger an event, have an NPC make a bold move, or introduce a complication.
-
-### The "Convergence Forecast"
-
-Starting at the midpoint of the game (approximately halfway through the expected round count), the narrator should track which plotlines are heading toward collision and when.
-
-```
-### CONVERGENCE FORECAST (Round [N])
-- [Plotline A] and [Plotline B] will collide in approximately [N] rounds because [reason]
-- [Character X] is on track to achieve their goal by Round [N] — consequences: [Y]
-- Potential simultaneous crises at endgame: [list]
-- Current biggest risk of anticlimactic resolution: [what might fizzle?]
-- Characters unlikely to complete their goals: [list — and that's fine]
-```
-
-**Extreme caution against over-tidiness.** The convergence forecast is a tracking tool, not a screenplay outline. Not every plotline needs to converge. Not every character needs a climactic resolution. Some characters will simply run out of time. A world where every thread wraps up neatly feels orchestrated. A world where some characters never got their chance feels real. The forecast should help the narrator ensure the endgame has a number of simultaneous or subsequent crises rather than a single climax, but it should not be used to engineer tidy conclusions for every subplot.
-
-This forecast helps the narrator ensure the endgame features genuine crises rather than a single climax followed by mopping up.
-
----
-(consider removing)
-
-## 5. ROLE DESIGN SUPPLEMENT — PLAYER ROLE SELECTION
-
-### Criteria for Strong Player Roles
-
-The base framework lists general criteria. This refinement adds a scoring heuristic:
-
-| Criterion | Weight | Test Question |
-|-----------|--------|---------------|
-| **Interaction motivation** | High | Does this role have a mechanical reason to approach and converse with many different characters? |
-| **Environmental engagement** | High | Does this role need to explore and interact with the physical setting? |
-| **Plot adjacency** | Medium | Is this role connected to the central secret without being at its center? |
-| **Survival likelihood** | Medium | Is this role unlikely to be targeted for violence in the early/mid game? |
-| **Moral flexibility** | Medium | Can this role make interesting choices that aren't just "good vs. evil"? |
-| **Alliance optionality** | Medium | Can this role meaningfully ally with multiple factions depending on player choice? |
-| **Ticking clock** | Low-Medium | Does this role have urgency that prevents passive observation? |
-
-**Roles that score poorly as player roles** (useful NPCs, poor player experience):
-
-- Roles whose primary action is waiting (the Assassin waiting for the right moment)
-- Roles whose goal is to avoid interaction (the Princess hiding her identity)
-- Roles that can be killed or removed early (any high-profile target without protection)
-- Roles whose win condition is simple and achievable in 1-2 actions
-
-**The narrator should select the player's role and present it as an assignment, not a menu.** The narrator has full knowledge of the role ecosystem and can choose the role that creates the richest experience. Player choice of role is a nice-to-have but risks the player choosing a role that's mechanically poor for the player position.
-
----
+The significance of locations, atmosphere, NPC reactions etc. should emerge through play, not through narration.

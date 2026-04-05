@@ -13,12 +13,43 @@ It came about from a design for a game I had planned that I presented to Claude 
 ## How to play
 
 - **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_vX.md` and optionally the corresponding `framework_refinements-patch_vX` file and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
+    - **DON'T** Suggest things that SHOULD happen, even if the narrator asks. Broad suggestions like "I want there to be suspicious rivalries and strange rituals" is good. Specific suggestions like: "At least 2 people should be killed" is bad.
 - It should now introduce you to the game and give you options on how to proceed.
 - **SELECT** from the provided options or **TYPE** your own answer freely.
   - **DO** try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
   - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the scenario your character is presented in the main chat window.
   - **DON'T** Move your character to areas that haven't been described to you.
+  - **DON'T** Close the chat window when the system is processing anything.
   - **TROUBLESHOOT** using the corresponding version notes below.
+  
+## Framework Version 2.1
+
+Introduces difficulty and dedicated time to process rounds to increase stability.
+
+### Tested With
+
+- Claude Opus: This is a difficult task and requires additional features such as writing several files and hiding them.
+
+### Features
+
+- Eliminated all major information leaks to the player in scene composed and choices presented.
+- Adds Casual, Normal and Hard modes to the game which can alter how quickly the NPCs operate in the world.
+- Adds stronger round structure checks to ensure the system is following the full process throughout the whole game making for a better more consistent story.
+- Adds checks for dramatic irony which is a writing style prone to knowledge leaks.
+- Some notes added to reduce the incidence of certain tropes and descriptions that appeared too frequently in tests
+- Some further refinements to make violence more viable, especially in desparate situations
+- Added punishments for the player deliberately acting outside of the simulation bounds
+- Many improvements to help ensure NPCs remain active and working towards their goals.
+- Removed momentum check as it has not been needed for the last two versions due to other improvements to NPCs and story structure.
+- Tested with "The Last Dividend" - a campaign with an excellent story, more unusual and unpredictable characters and far better knowledge control. The only issue was conspicuous knowledge leaks before composing player facing scenes but this is a structural issue that has since been addressed. This might need more work as the AI even when reflecting back on the story appears "blind" to these leaks, possibly thinking they are writing them to the scratch space when they are not. Appeared to eliminate "dead end" characters. Everybody got an ending.
+
+### Known Issues / Troubleshooting
+
+- May leak information to the player (secrets they shouldn't know) in the main text window **BEFORE** presenting a scene. Remind it not to with this:
+
+    ```chat
+    (The process is going very well, just you leaked some vital information there before composing the scene. Make sure to write all prescene preparation in the scratch file)
+    ```
 
 ## Framework Version 2
 
