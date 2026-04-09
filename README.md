@@ -1,6 +1,6 @@
 # The Friction Directive
 
-The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window.:
+The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window:
 
 - The game allows a player to take on a particular role (spy, thief, appraiser etc.) and try to complete their goal (find the prisoner, complete a ritual, steal a special item etc.) in an enclosed setting (such as a gathering at an old castle, a ship, a train etc.).
 - The player must uncover the mysteries behind the characters and the world in order to complete their goal.
