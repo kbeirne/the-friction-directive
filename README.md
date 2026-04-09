@@ -1,6 +1,6 @@
 # The Friction Directive
 
-The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window:
+The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window.:
 
 - The game allows a player to take on a particular role (spy, thief, appraiser etc.) and try to complete their goal (find the prisoner, complete a ritual, steal a special item etc.) in an enclosed setting (such as a gathering at an old castle, a ship, a train etc.).
 - The player must uncover the mysteries behind the characters and the world in order to complete their goal.
@@ -8,20 +8,66 @@ The Friction Directive is a framework designed to instruct an AI on how to creat
 - As this happens, 12+ other characters with their own roles attempt to complete their goals that may conflict with the player.
 - The world exists outside the player and they can miss key events and characters. The entire game's story can be reviewed by the player at the end so they can find out everything they might have been missed.
 
-It came about from a design for a game I had planned that I presented to Claude Opus. After some refinements and a highly successful first playthrough, I formalised these documents and began refining them with the hope of directing an AI to create more interesting and more reliable social deduction RPGs. Takes inspiration from games like Werewolf, Blood on the Clocktower and the Minecraft Orient Express map.
+It came about from a design for a game I had planned that I presented to Claude Opus. After some refinements and a highly successful first playthrough, I formalised these documents and began refining them with the hope of directing an AI to create more interesting and more reliable social deduction RPGs. Takes inspiration from games like Werewolf, Blood on the Clocktower, the Minecraft Orient Express map and the "Choose Your Own Adventure" books. A special thanks to the Yogscast for their live action BotC set in a manor - social deduction in a live location was a vital missing piece to the puzzle.
 
 ## How to play
 
 - **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_vX.md` and optionally the corresponding `framework_refinements-patch_vX` file and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
-    - **DON'T** Suggest things that SHOULD happen, even if the narrator asks. Broad suggestions like "I want there to be suspicious rivalries and strange rituals" is good. Specific suggestions like: "At least 2 people should be killed" is bad.
+  - **DON'T** Be too specific when making narrative suggestions: "I want there to be suspicious rivalries and strange rituals" is better than "2 characters have to race to complete a special ritual".
 - It should now introduce you to the game and give you options on how to proceed.
 - **SELECT** from the provided options or **TYPE** your own answer freely.
   - **DO** try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
-  - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the scenario your character is presented in the main chat window.
-  - **DON'T** Move your character to areas that haven't been described to you.
-  - **DON'T** Close the chat window when the system is processing anything.
+  - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the main chat window.
+  - **DON'T** Close the chat window when the system is processing.
   - **TROUBLESHOOT** using the corresponding version notes below.
   
+## Framework Version 2.1.1
+
+Resolves the issue of non-scene data leaking to the player and a host of small narrative and structural improvements.
+
+### Tested With
+
+- Claude Opus (recommended): This is a difficult task and requires additional features such as writing several files and hiding them.
+- Claude Sonnet: An unmonitored playtest of this ran successfully (had all the file writing/hiding capabilities needed). More testing needed.
+
+### Features
+
+#### NPC improvements
+
+- Improved variety of NPC descriptions
+- Added additional guidelines to role creation to prevent typical story tropes and to make roles harder for the player to determine
+- Enforced fewer characters knowing each other when the scenario starts to add to the mystery
+- Fixed incongruities with NPC speech where they would act like they could not be heard by someone else even when that wasn't realistic
+- Loosened restrictions on violence rules when an NPC is "desperate"
+
+#### Structural improvements
+
+- Improvements to the endgame with a more player-centered narrative and structured epilogue
+- Improved knowledge ledger reference structure and reduced knowledge leakage outside of scenes
+- Provided strict structure for Round checklist to prevent knowledge leaks
+- Added punishments for player misbehaviour
+- Removed Momentum Check as other fixes appear to already prevent most NPC momentum issues
+
+### "The Lion's Collection" Playtest
+
+- Structurally, the game ran like clockwork
+- Best knowledge control to date with no leaks outside of scenes.
+- Narrator hid NPC intentions much better with more ambiguous descriptions.
+- Outstanding knowledge leaks were mostly in continuations i.e. When the player had already learned one thing (e.g. Brother Silvan is prowling the halls, acting suspiciously) it would later include more specific knowledge (he has a knife) when referencing what the player had learned. It seems it is not enough to be aware of the player knowledge when deciding what information to PRESENT, the narrator must be aware of it when RECOUNTING player knowledge as well.
+- A high level of difficulty (on hard mode) maintained well, including surprising (but sensible) rejections from the narrator suggesting a more rigid adherence to The Friction Directive.
+- Pacing was poor:
+  - Player selecting a longer time frame (3 days instead of 1 evening) meant more and longer scenes between rounds which felt like more work for the player.
+  - Timing per scene felt almost *too* rigid (~15 minutes per scene). May be a side-effect of better adherence to the round structure.
+  - The player knew almost none of the characters at the start which was both fun and a goal of this version but potentially overwhelming.
+  - Choosing a complicated setting may have contributed to pacing issues. The player requested a "Fantasy historic akin to national treasure and the Da Vinci Code. Perhaps set in the vatican or a museum." which created a story with characters speaking different languages and more historically significant references and terms.
+- Fewer predictable characters - the Monk as Assassin/Enforcer was particularly notable.
+
+### Troubleshooting
+
+- Player knowledge leaks should now be rare. Offering prompts to rectify the issue may help but is not likely to be as effective as with previous versions.
+
+- A short timeframe (a single day/evening) is recommended for better pacing. If you are having issues with pacing you can prompt the system to write shorter scenes. `(just put such prompts in brackets, like this)`
+
 ## Framework Version 2.1
 
 Introduces difficulty and dedicated time to process rounds to increase stability.
@@ -32,14 +78,14 @@ Introduces difficulty and dedicated time to process rounds to increase stability
 
 ### Features
 
-- Eliminated all major information leaks to the player in scene composed and choices presented.
-- Adds Casual, Normal and Hard modes to the game which can alter how quickly the NPCs operate in the world.
-- Adds stronger round structure checks to ensure the system is following the full process throughout the whole game making for a better more consistent story.
-- Adds checks for dramatic irony which is a writing style prone to knowledge leaks.
+- Eliminated all major information leaks to the player in scene composed and choices presented
+- Adds Casual, Normal and Hard modes to the game which can alter how effectively the NPCs operate in the world
+- Adds stronger round structure checks to ensure the system is following the full process throughout the whole game making for a better more consistent story
+- Adds checks for dramatic irony which is a writing style prone to knowledge leaks
 - Some notes added to reduce the incidence of certain tropes and descriptions that appeared too frequently in tests
 - Some further refinements to make violence more viable, especially in desparate situations
 - Added punishments for the player deliberately acting outside of the simulation bounds
-- Many improvements to help ensure NPCs remain active and working towards their goals.
+- Many improvements to help ensure NPCs remain active and working towards their goals
 - Removed momentum check as it has not been needed for the last two versions due to other improvements to NPCs and story structure.
 - Tested with "The Last Dividend" - a campaign with an excellent story, more unusual and unpredictable characters and far better knowledge control. The only issue was conspicuous knowledge leaks before composing player facing scenes but this is a structural issue that has since been addressed. This might need more work as the AI even when reflecting back on the story appears "blind" to these leaks, possibly thinking they are writing them to the scratch space when they are not. Appeared to eliminate "dead end" characters. Everybody got an ending.
 
