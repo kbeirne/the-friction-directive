@@ -1,6 +1,6 @@
 # The Friction Directive
 
-The Friction Directive is a framework designed to instruct an AI on how to create a asymetric social deduction RPG that is playable from inside an LLM chat window:
+The Friction Directive is a framework designed to instruct an AI on how to create a asymmetric social deduction RPG that is playable from inside an LLM chat window:
 
 - The game allows a player to take on a particular role (spy, thief, appraiser etc.) and try to complete their goal (find the prisoner, complete a ritual, steal a special item etc.) in an enclosed setting (such as a gathering at an old castle, a ship, a train etc.).
 - The player must uncover the mysteries behind the characters and the world in order to complete their goal.
@@ -29,6 +29,7 @@ Resolves the issue of non-scene data leaking to the player and a host of small n
 
 - Claude Opus (recommended): This is a difficult task and requires additional features such as writing several files and hiding them.
 - Claude Sonnet: An unmonitored playtest of this ran successfully (had all the file writing/hiding capabilities needed). More testing needed.
+- chatGPT Free: 2 incomplete tests were run for this on chatGPT. The results were worse (GPT's writing style is more dull and simplistic) but still very playable. More testing needed.
 
 ### Features
 
@@ -52,7 +53,7 @@ Resolves the issue of non-scene data leaking to the player and a host of small n
 
 - Structurally, the game ran like clockwork
 - Best knowledge control to date with no leaks outside of scenes.
-- Narrator hid NPC intentions much better with more ambiguous descriptions.
+- Narrator hid NPC intentions much better, with more ambiguous descriptions.
 - Outstanding knowledge leaks were mostly in continuations i.e. When the player had already learned one thing (e.g. Brother Silvan is prowling the halls, acting suspiciously) it would later include more specific knowledge (he has a knife) when referencing what the player had learned. It seems it is not enough to be aware of the player knowledge when deciding what information to PRESENT, the narrator must be aware of it when RECOUNTING player knowledge as well.
 - A high level of difficulty (on hard mode) maintained well, including surprising (but sensible) rejections from the narrator suggesting a more rigid adherence to The Friction Directive.
 - Pacing was poor:
@@ -64,8 +65,8 @@ Resolves the issue of non-scene data leaking to the player and a host of small n
 
 ### Troubleshooting
 
-- Player knowledge leaks should now be rare. Offering prompts to rectify the issue may help but is not likely to be as effective as with previous versions.
-
+- Player knowledge leaks should now be rare. Offering prompts to rectify the issue may help but may not be as effective as with previous versions.
+- [For Sonnet and chatGPT]: If you are not told what you are doing when you start the game then write this `(what is my role, goal and abilities)`
 - A short timeframe (a single day/evening) is recommended for better pacing. If you are having issues with pacing you can prompt the system to write shorter scenes. `(just put such prompts in brackets, like this)`
 
 ## Framework Version 2.1
