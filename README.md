@@ -20,7 +20,52 @@ It came about from a design for a game I had planned that I presented to Claude 
   - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the main chat window.
   - **DON'T** Close the chat window when the system is processing.
   - **TROUBLESHOOT** using the corresponding version notes below.
-  
+
+## Framework Version 3
+
+Resolves many small issues including compacting issues with latest Claude versions and round discipline. Combines the patch notes into the main framework for simplicity.
+
+### Tested With
+
+- Claude Opus (recommended): This is a difficult task and requires additional features such as writing several files and hiding them.
+
+### Features
+
+#### NPC improvements
+
+- Allow NPCs to be wrong with their hunches
+- Better hides NPC intents
+
+#### Structural improvements
+
+- Combined patch notes into main document successfully
+- Minor language changes to nudge environmental factors such as round time, location importance and violence rules
+- Prevented narrator from over-sharing on behalf of the player
+- Narrator allows player to abandon their goal
+- Improved information control
+- Fixed compaction issues and improved round structure at the cost of scene processing time
+- Removed separate Bible instructions for more focus on Round Structure
+- Removed predetermined alliances
+
+### "The Last Tide of Saint Malon" Playtest
+
+- Much better pacing - single night/next morning structure appears to work best
+- No interesting alliances formed
+- NPC descriptions were excellent, nothing given away. Maybe too far the other direction but an improvement.
+- Oversharing on behalf of player didn't occur
+- Excellent NPC tracking with most following multi-step plans and goals
+- Stories intersected less than with previous versions, may be a result of setting and some luck on the part of the player
+- Hard was still too easy - NPCs that help the player advance as quickly as those who hinder them.
+- Noticed a red herring at work - trope of falsely imprisoned man being my brother was avoided
+- Gave additional information about NPCs offscreen - this was expected. Fixes still to be tested.
+- Player was told something somewhat important they didn't know once.
+- Game compressed towards the end similar to the last version. Added some NOTES for possible root causes.
+- Game took longer to process due to improved discipline when handling multiple scenes per round  - was it worth it?
+
+### Troubleshooting
+
+- If you are having issues with pacing you can prompt the system to write shorter scenes. `(just put such prompts in brackets, like this)`
+
 ## Framework Version 2.1.1
 
 Resolves the issue of non-scene data leaking to the player and a host of small narrative and structural improvements.
