@@ -2,20 +2,12 @@
 
 A temporary, non-versioned space for potential issues and improvements not addressed in this version:
 
--  Add this section to scratch space perception filter
-    ## WHAT THE PLAYER KNOWS
-    - Relevant facts the player knows going into this scene. Any reminders the narrator delivers in a scene MUST be in the player knowledge ledger.
-
 - Repetitive "managing his domain" chatter e.g.
     "His movements are efficient, practiced — hands that know exactly where to place each glass without looking."
 
 - A journalist is a natural pick for such social deduction games but do not include the role in every game.
 
-- [narrator must confirm that ALL reasoning, planning, and deliberation has been written to files. No analytical text may appear in the player-facing output]
-
 - the narrator must not assign moral outcomes the player hasn't chosen
-
-- Might not be needed if checklist and premable obscuring rules are followed. Consider if there are still issues - "Only use scene data to update the player knowledge ledger. No other output should be used to generate player knowledge."
 
 - Removing the momentum check for now - might need to return
 
@@ -30,6 +22,8 @@ A temporary, non-versioned space for potential issues and improvements not addre
     > - Is at least one situation more urgent than it was last round?
     >
     > If the answer to all three is NO, the narrator should accelerate: trigger an event, have an NPC make a bold move, or introduce a complication.
+
+- [narrator must confirm that ALL reasoning, planning, and deliberation has been written to files. No analytical text may appear in the player-facing output]
 
 - no proposition about an NPC's hidden state may appear in player-facing prose unless it already exists in the scratch file or player knowledge ledger at the time the scene begins.
 
@@ -58,7 +52,6 @@ A temporary, non-versioned space for potential issues and improvements not addre
 - The narrator has to be able to feel a crescendo coming in order to write toward it, but has to remain entirely willing to abandon that crescendo if the player walks somewhere else. That is a much harder discipline than "don't know the ending," because it asks the narrator to hold the ending lightly rather than to refuse to hold one at all.
 
 - any thread the player visibly engages with — a romantic register, a moral question, a relationship with an NPC, a goal the narrator did not assign — becomes a player-authored plot thread that the narrator is obligated to advance toward resolution alongside the player's primary goals
-
 
 - If the player writes toward an emotional beat — intimacy, grief, anger, vulnerability — the narrator follows the player's lead in tone and weight, and does not soften the beat below the level the player set for it.
 
@@ -98,8 +91,6 @@ Possible Regressions:
 
 - Endgame Scene Centering is doing some dangerous heavy lifting, forcing the game to a close before it is ready/narratively satisfying. Overcentering on the player might be  cutting the game short.
 
-- "Ensure all four are represented." Could also be a regression - may be forcing the story down separate pathways.
-
 - None of the characters should know one another when the game starts
 
 - Define at least one narrator-triggered event (like "The Midnight Bell") ... possible regression, multiple events may be diluting their effect and increasing the chance they run off screen.
@@ -107,3 +98,7 @@ Possible Regressions:
 - "Never narrate what physical tells could mean" - Too early to say but this made very restricted NPC descriptions, might have gone too far.
 
 - "Do not decide what alliances will be formed in advance." Good for player, maybe not for NPCs
+
+- The game diary and player knowledge ledger's last line should always be. "Remember to always ask myself, am I referencing the framework document and following the ROUND STRUCTURE."
+
+- Adjust the scene length based on expected amount of back and forth. Ensure scenes don't run too long by noting possible decisions points for the player. If the current round has many potential decision points then make the scenes shorter to allow the player make decisions and respond without an excessive amount of text. This should be balanced to keep pacing.

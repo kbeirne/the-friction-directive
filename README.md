@@ -12,14 +12,48 @@ It came about from a design for a game I had planned that I presented to Claude 
 
 ## How to play
 
-- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_vX.md` and optionally the corresponding `framework_refinements-patch_vX` file and explain that it is tasked with generating a new RPG based on these rules. It should then ask you some questions on the type of RPG you want such as the setting/pacing etc. which you should answer.
+- **OPEN** an LLM chat window (`Claude Opus` recommended) and provide the LLM with the `asymmetric_rpg_framework_vX.md` and optionally the corresponding `framework_refinements-patch_vX` file and ask it to make you a nee game based on the the framework
   - **DON'T** Be too specific when making narrative suggestions: "I want there to be suspicious rivalries and strange rituals" is better than "2 characters have to race to complete a special ritual".
-- It should now introduce you to the game and give you options on how to proceed.
-- **SELECT** from the provided options or **TYPE** your own answer freely.
-  - **DO** try to get character/place names etc. correct and act in a logically consistent way so as not to confuse the system. The LLM will handle it regardless but the simulation will be worse.
-  - **DON'T** view any files the LLM creates - all the information you need to play the game will appear in the main chat window.
-  - **DON'T** Close the chat window when the system is processing.
-  - **TROUBLESHOOT** using the corresponding version notes below.
+- It should now introduce you to the game and give you options on how to proceed
+
+## Framework Version 3.1
+
+Resolves many small issues including compacting issues with latest Claude versions and round discipline. Combines the patch notes into the main framework for simplicity.
+
+### Tested With
+
+- Claude Sonnet: My first test with Sonnet, went very well.
+
+### Features
+
+#### Structural improvements
+
+- Improved intro
+- Improved naming rules
+- Improved epilogue with more player-centered narration.
+- Added ability for narrator to clarify intent with the player rather than assume
+- Reduced narrator propensity to assume actions for the player
+- Reduced narrator propensity to paint player as the good guy
+- Some other small clarifications
+
+### "The Adriatic Affair" Playtest
+
+- Great cast, setting and pacing (slowed a little towards the end)
+- Losing is still seemingly out of reach. I stood over a body, ran away from the guards and double crossed an assassin but remained unscathed.
+- Risks and betrayals on my character's part were not sufficiently punished.
+- Event triggers were less meaningful but there were still decent reconnection beats.
+- Story conclusion felt a bit flat but this felt more to my more hastier and erratic decisions I made for this version. Still worked well.
+- Epilogue was excellent - integrated all instructions and the new player-centered narration. Only gripe was a little too much ambiguity of some character's stories. Could have been clearer.
+- Allowed for morally ambiguous decisions though didn't do much with it. Still may be some resistance to writing villanous/wreckless character arcs. More testing needed as this character did not have cause to press the limits of this.
+- Narrator successfully asked for clarification from the player which was intended for this version
+- No runaway story-writing; every decision felt like my own. Only exception was a misinterpretation but was contextually understandable - I used the term "main corridor" which was ambiguous.
+- Some knowledge leaks in story options. Nothing game breaking.
+- Name leaks were improved if not perfect.
+- Rounds a little long giving narrator less time to update other NPCs.
+
+### Troubleshooting
+
+- Now integrated into the instructions
 
 ## Framework Version 3
 
