@@ -16,6 +16,21 @@ It came about from a design for a game I had planned that I presented to Claude 
   - **DON'T** Be too specific when making narrative suggestions: "I want there to be suspicious rivalries and strange rituals" is better than "2 characters have to race to complete a special ritual".
 - It should now introduce you to the game and give you options on how to proceed
 
+## Framework Version 4
+
+Some small alterations to the previous framework to resolve regressions. This acts as the basis of the API project not documented here.
+
+- Removed diary anti-patterns as the negatives are difficult for Sonnet to parse and take up context space that can be clarified with affirmative instructions.
+- More precise instructions in round structure to make it easier for smaller models to follow.
+- Restored the absence principle as endings suffered without it.
+- Removed "Consequence Absorption" and "Emotional State Hedging" as they did not provide visible improvement. These may be restored in simpler form in future versions.
+- Slight nudge to get narrator to accelerate NPC actions
+- Removed "HARD mode" NPC behavior instruction. It was causing language to be too closed/ambiguous. Level of ambiguity characters utilize needs further refinement.
+
+### Tested With
+
+- Haiku, Sonnet and Opus: A new private API version of this framework is now in development. This will probably be the last major update to this repo.
+
 ## Framework Version 3.1
 
 Resolves many small issues including compacting issues with latest Claude versions and round discipline. Combines the patch notes into the main framework for simplicity.
@@ -48,6 +63,7 @@ Resolves many small issues including compacting issues with latest Claude versio
 - Narrator successfully asked for clarification from the player which was intended for this version
 - No runaway story-writing; every decision felt like my own. Only exception was a misinterpretation but was contextually understandable - I used the term "main corridor" which was ambiguous.
 - Some knowledge leaks in story options. Nothing game breaking.
+- One NPC opened up with an unrealistic amount of help text.. though it did keep the story moving as it slowed towards the end.
 - Name leaks were improved if not perfect.
 - Rounds a little long giving narrator less time to update other NPCs.
 
@@ -258,6 +274,19 @@ The so called "Wizard's Feast" deduction game that the AI generated was remarkab
 ### Tested With
 
 - Claude Opus: This is a difficult task and requires additional features such as writing several files and hiding them.
+
+### Ethics Statement
+
+NOTE: This is still being worked on. Every word of this is written by me without AI assistance. A more refined version will appear on our website.
+
+There is a fundamental tension between generative AI and the data it was trained on. A project similar to this could easily be used to generate derivative work from other authors or include AI artwork that could have been sourced from real creators. However this is not my intention nor is it, I believe, the end result in practice. There are a few factors that influence this:
+
+- The entire design for this game is my own creation and I had the idea for this before I ever realised AI might help to deliver it. The influences are listed above but the primary one was Blood on the Clocktower which is an in-person deduction game which is how I had originally conceived the idea. However the dynamism in the story and complexity of mechanics I wanted made it  difficult to be make fun in a deterministic setting without writing a one-shot escape room style version. As I wanted to make this game replayable without compromising on the game mechanics I found AI to be the best way to deliver this game. I have a game development degree and have spent my life thinking about and working on games.
+- I don't ever use "write in the style of <famous-author>" or any hints that try to recreate a real person's work.
+- The language in this game is deliberately simple to facilitate the gameplay. Whilst there are occasional writing flourishes to add some excitement to the plot it is not designed with "excellent writing" in mind. I don't believe this game will ever produce any text that would credibly compete with a competently written book nor will it ever be on par with a campaign made by a human DM for their friends. I have no desire to replace anybody's work with this.
+- A website version is in development which may include sounds - these will all be sourced from real artists.
+- We use no AI generated images. If we ever include artwork in future such as character profile pictures then they will be soured from real artists.
+- The ethics of using AI are tricky and I welcome your queries and criticisms of my approach.
 
 ### Known Issues
 

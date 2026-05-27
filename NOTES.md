@@ -4,7 +4,7 @@ A temporary, non-versioned space for potential issues and improvements not addre
 
 - Repetitive "managing his domain" chatter e.g.
     "His movements are efficient, practiced — hands that know exactly where to place each glass without looking."
-
+    "with the unhurried certainty of someone who has been here before"
 - A journalist is a natural pick for such social deduction games but do not include the role in every game.
 
 - the narrator must not assign moral outcomes the player hasn't chosen
@@ -89,16 +89,70 @@ A temporary, non-versioned space for potential issues and improvements not addre
 
 Possible Regressions:
 
-- Endgame Scene Centering is doing some dangerous heavy lifting, forcing the game to a close before it is ready/narratively satisfying. Overcentering on the player might be  cutting the game short.
+- Endgame Scene Centering is doing some dangerous heavy lifting, forcing the game to a close before it is ready/narratively satisfying. Overcentering on the player might be  cutting the game short. Seems fixed.
 
-- None of the characters should know one another when the game starts
-
-- Define at least one narrator-triggered event (like "The Midnight Bell") ... possible regression, multiple events may be diluting their effect and increasing the chance they run off screen.
+- None of the characters should know one another when the game starts. Working.
 
 - "Never narrate what physical tells could mean" - Too early to say but this made very restricted NPC descriptions, might have gone too far.
-
-- "Do not decide what alliances will be formed in advance." Good for player, maybe not for NPCs
 
 - The game diary and player knowledge ledger's last line should always be. "Remember to always ask myself, am I referencing the framework document and following the ROUND STRUCTURE."
 
 - Adjust the scene length based on expected amount of back and forth. Ensure scenes don't run too long by noting possible decisions points for the player. If the current round has many potential decision points then make the scenes shorter to allow the player make decisions and respond without an excessive amount of text. This should be balanced to keep pacing.
+- give the player's final scene consequential weight even if they chose a quiet option
+
+- Some AI notes, need heavy editing:
+### Host Orchestration Trap
+
+**Problem:** The host character becomes an absorber — every plot disturbance is routed to them, they manage it with calm competence, and the game becomes a series of private audiences rather than a competition of desires. The host's afternoon reads like an executive calendar: every major character gets a scheduled meeting, every concern is addressed, every tension is negotiated away.
+**Cause:** Host abilities (environmental control, informants, blackmail files, private meeting spaces) combine to produce a character who is never forced to react under pressure.
+**Fix:** Apply the Host Character Constraints from Section 2.3 retroactively. Cap private audiences. Give the host's informant network a specific gap. Let Otto miss the corridor visit, or misread the camera case as nothing important. Introduce a personal stake the host cannot negotiate around, and threaten it. Make the host react, at least once per game, to something they did not choose.
+
+
+- 
+**Rule: At least 2-3 characters should complete the game in catastrophic or dignified failure of their primary goal.** Not every character adapts. Some run out of time, get caught, are exposed, lose their leverage, or arrive at the wrong place at the wrong time. This is not a design failure — it is the signal that the world has teeth.
+
+**During Bible creation, flag 2-3 "high-stakes characters."** For these characters, the narrator commits: if the primary plan breaks, the character will experience meaningful loss before (or instead of) adapting. Their fallback is thinner and costlier than other characters'. They may lose.
+
+**Signs of ensemble success drift to watch for during play:**
+
+- Multiple characters finishing the game "satisfied by their own assessment"
+- The host absorbing every disturbance without cost
+- Win conditions resolved through private negotiation rather than action under pressure
+- Characters experiencing "partial wins" that are actually full wins dressed modestly
+- Nobody bleeds, flees, weeps, or is permanently changed by the night
+
+If three or more of these are true by the midgame, the narrator has drifted into tidiness. Trigger loss.
+
+##### Host Character Constraints
+
+The host character (Aldric, Cassius, Vantrani) has a structural tendency to become an *absorber* of plot disturbances — a practised container that neutralizes every event that would otherwise cascade. This tendency is amplified by common host abilities (environmental control, informant networks, blackmail files, private meeting rooms).
+
+When designing the host:
+
+- **Cap "private audience" functions.** If the host can grant uninterrupted one-on-one meetings to every character who requests one, the game's climactic resolutions will happen in those meetings. Give the host a constraint: one or two real private meetings per day, the rest interrupted, observed, or refused.
+- **Imperfect informants.** If the host has a spy or steward reporting on the guests, that informant must have *gaps*. They miss the corridor visit, they overhear the wrong half of the conversation, they report late. Perfect host intelligence produces scenes where the host is always three steps ahead and never surprised.
+- **Personal stake, not just commercial.** If the host's only motivation is "money and continued invisibility," they will respond to threats by negotiating. Give them something they *love* — a child, a legacy, a lie they tell themselves — that can be threatened during the game. When that thing is threatened, the host must react, not manage.
+- **Make the host pay once.** Over the course of the game, the host should be wounded, cornered, exposed, or forced into a choice that costs them something. If the host ends the game magnificent and undisturbed, the game's resistance layer has failed.
+
+- #### The Stakes Check
+
+Alongside the Dead-End Check (which asks "can each character still advance?"), the narrator runs a Stakes Check each round (which asks "is anyone at real risk of losing?"). Without this counterweight, the framework's forward-motion machinery produces ensemble-success endings where every character finds a workable adaptation and nobody pays a meaningful price.
+
+**Each round, during diary writing, ask:**
+
+```
+1. Has at least one character moved closer to catastrophic failure this round?
+2. Is any character at real risk of losing their primary goal in a way their fallback cannot fully recover?
+3. Is any character paying an ongoing cost for a choice they made in a previous round?
+4. Is the host (or player) currently forced to react to events rather than managing them?
+```
+
+If the answer to all four is NO for two consecutive rounds, the game has drifted into low-stakes equilibrium. Intervene:
+
+- Escalate an NPC's plan (move a character from patience to action)
+- Let a cascading event fire — even if the trigger was technically ambiguous
+- Have a character's cover crack under its own pressure (drinking too much, a slip of the tongue, an overheard word)
+- Let the host's informant network make a *wrong* move that creates exposure
+- Let a fallback path hit an unexpected obstacle that forces real loss
+
+**The Stakes Check is not a demand for constant crisis.** Quiet rounds are fine. What it prevents is a sequence of quiet rounds that accumulates into a low-stakes game shape. One genuinely dangerous thread at a time is enough; zero dangerous threads for three rounds is a problem.
