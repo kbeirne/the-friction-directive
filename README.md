@@ -275,19 +275,6 @@ The so called "Wizard's Feast" deduction game that the AI generated was remarkab
 
 - Claude Opus: This is a difficult task and requires additional features such as writing several files and hiding them.
 
-### Ethics Statement
-
-NOTE: This is still being worked on. Every word of this is written by me without AI assistance. A more refined version will appear on our website.
-
-There is a fundamental tension between generative AI and the data it was trained on. A project similar to this could easily be used to generate derivative work from other authors or include AI artwork that could have been sourced from real creators. However this is not my intention nor is it, I believe, the end result in practice. There are a few factors that influence this:
-
-- The entire design for this game is my own creation and I had the idea for this before I ever realised AI might help to deliver it. The influences are listed above but the primary one was Blood on the Clocktower which is an in-person deduction game which is how I had originally conceived the idea. However the dynamism in the story and complexity of mechanics I wanted made it  difficult to be make fun in a deterministic setting without writing a one-shot escape room style version. As I wanted to make this game replayable without compromising on the game mechanics I found AI to be the best way to deliver this game. I have a game development degree and have spent my life thinking about and working on games.
-- I don't ever use "write in the style of <famous-author>" or any hints that try to recreate a real person's work.
-- The language in this game is deliberately simple to facilitate the gameplay. Whilst there are occasional writing flourishes to add some excitement to the plot it is not designed with "excellent writing" in mind. I don't believe this game will ever produce any text that would credibly compete with a competently written book nor will it ever be on par with a campaign made by a human DM for their friends. I have no desire to replace anybody's work with this.
-- A website version is in development which may include sounds - these will all be sourced from real artists.
-- We use no AI generated images. If we ever include artwork in future such as character profile pictures then they will be soured from real artists.
-- The ethics of using AI are tricky and I welcome your queries and criticisms of my approach.
-
 ### Known Issues
 
 - Fails to obscure knowledge from the player reliably (has trouble distinguishing what the player does and does not know). Once the scratch space was added, these issues were minor and did not ruin the goal-based nature of the story but were still present.
@@ -319,3 +306,16 @@ There is a fundamental tension between generative AI and the data it was trained
 - For other issues, **READ** `4.1 — Round Structure` and ensure the LLM is following the steps correctly. e.g. 
 
 There are limitations to this version and not all consistency issues can be resolved this way. Unless seriously disruptive I recommend ignoring them as the LLM is very good at smoothing out consistency issues over time.
+
+## Ethics Statement
+
+NOTE: This is still being worked on. Every word of this is written by me without AI assistance. A more refined version will appear on our website.
+
+There is a fundamental tension between generative AI and the data it was trained on. A project similar to this could easily be used to generate derivative work from other authors or include AI artwork that could have been sourced from real creators. However this is not my intention nor is it, I believe, the end result in practice. There are a few factors that influence this:
+
+- The entire design for this game is my own creation and I had the idea for this before I ever realised AI might help to deliver it. The influences are listed above but the primary one was Blood on the Clocktower which is an in-person deduction game which is how I had originally conceived the idea. However the dynamism in the story and complexity of mechanics I wanted made it  difficult to be make fun in a deterministic setting without writing a one-shot escape room style version. As I wanted to make this game replayable without compromising on the game mechanics I found AI to be the best way to deliver this game. I have a game development degree and have spent my life thinking about and working on games.
+- I don't ever use "write in the style of <famous-author>" or any hints that try to recreate a real person's work.
+- The language in this game is deliberately simple to facilitate the gameplay. Whilst there are occasional writing flourishes to add some excitement to the plot it is not designed with "excellent writing" in mind. I don't believe this game will ever produce any text that would credibly compete with a competently written book nor will it ever be on par with a campaign made by a human DM for their friends. I have no desire to replace anybody's work with this.
+- A website version is in development which may include sounds - these will all be sourced from real artists.
+- We use no AI generated images. If we ever include artwork in future such as character profile pictures then they will be soured from real artists.
+- The ethics of using AI are tricky and I welcome your queries and criticisms of my approach.
